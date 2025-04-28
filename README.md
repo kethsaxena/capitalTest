@@ -1,6 +1,6 @@
-🐍 Python Solution for CAPITAL group Screening TEST
+# 🐍 Python Solution for CAPITAL group Screening TEST
 
-📜 Problem Statement
+# 📜 Problem Statement
 
 1. Build an ETL process for stock pricing data ingestion into a database.
 
