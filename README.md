@@ -14,29 +14,47 @@
 
 ## SRC
  
-Data Structure of CSVs:
-date → datetime (format: %Y-%m-%d)
-id → int (1 to 200) (stock IDs)
-price → float
-trade_volume → int
+| Column        | Data Type | Description                        |
+|---------------|-----------|------------------------------------|
+| date          | datetime  | Date in format `%Y-%m-%d`          |
+| id            | int       | Stock ID (ranging from 1 to 200)   |
+| price         | float     | Stock price                        |
+| trade_volume  | int       | Number of shares traded            |
+
 
 ## TARGET:
 1. Price Table:
-Columns: date, stk_001, stk_002, ..., stk_200
 Each stock’s price goes into corresponding stock column.
 
+| Column  | Data Type | Description                 |
+|---------|-----------|-----------------------------|
+| date    | datetime  | Date in format `%Y-%m-%d`   |
+| stk_001 | float     | Price for stock ID 1        |
+| stk_002 | float     | Price for stock ID 2        |
+| ...     | float     | ...                         |
+| stk_200 | float     | Price for stock ID 200      |
+
+
 1. Volume Table:
-Columns: date, stk_001, stk_002, ..., stk_200
 Each stock’s trade volume goes into corresponding stock column.
+
+| Column  | Data Type | Description                         |
+|---------|-----------|-------------------------------------|
+| date    | datetime  | Date in format `%Y-%m-%d`           |
+| stk_001 | int       | Trade volume for stock ID 1         |
+| stk_002 | int       | Trade volume for stock ID 2         |
+| ...     | int       | ...                                 |
+| stk_200 | int       | Trade volume for stock ID 200       |
+
 
 # 🚀 Solution Approach
 This repository contains a clean and efficient Python solution for the problem.
 
 ## The key steps involved are:
 1. Input Parsing: Accept the input in a structured format (list, string, tree, etc.).
-2. Core Logic: Apply an optimized algorithm (e.g., hash maps, recursion, dynamic programming) to solve the problem efficiently.
-3. Output Generation: Return the results in the expected format.
+1. Core Logic: Apply an optimized algorithm (e.g., hash maps, recursion, dynamic programming) to solve the problem efficiently.
+1. Output Generation: Return the results in the expected format.
 
 ## 🛠️ Technologies Used
 1. Python 3.x
-2. Standard Libraries Only (no external dependencies)
+1. Standard PyPi Libraries Only https://pypi.org/project/emoji/ 
