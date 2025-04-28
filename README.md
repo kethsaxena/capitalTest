@@ -7,10 +7,10 @@
 ## 🛠️ Constraints:
 
 1. Data: 10 CSV files (total 100GB) in random order.
-2. Server Resources:
-3. Memory: 32 GB
-4. CPU: 4 cores
-5. Disk Space: 100 GB free
+1. Server Resources:
+    1. Memory: 32 GB
+    1. CPU: 4 cores
+    1. Disk Space: 100 GB free
 
 ## SRC
  
@@ -25,7 +25,7 @@ trade_volume → int
 Columns: date, stk_001, stk_002, ..., stk_200
 Each stock’s price goes into corresponding stock column.
 
-2. Volume Table:
+1. Volume Table:
 Columns: date, stk_001, stk_002, ..., stk_200
 Each stock’s trade volume goes into corresponding stock column.
 
