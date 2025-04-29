@@ -58,5 +58,4 @@ This repository contains Python script solution.py for the problem.
 
 ## 🛠️ Technologies Used
 1. Python 3.x
-1. PySpark
 1. Standard PyPi Libraries Only https://pypi.org/project/emoji/ 
