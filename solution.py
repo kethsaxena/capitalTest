@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # INPUT VARIABLES
-CSV_FOLDER = '/path/to/csv/folder'  # folder containing 10 csv files
+CSV_FOLDER = '/path/to/input/csv/folder'  # folder containing 10 csv files
 OUTPUT_FOLDER = '/path/to/csv/folder'
 CHUNK_SIZE = 500_000                # number of rows per chunk to control memory
 PRICE_OUTPUT = f"{OUTPUT_FOLDER}/price_table.csv"    # intermediate merged price file
