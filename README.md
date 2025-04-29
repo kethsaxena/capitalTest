@@ -48,36 +48,12 @@ Each stock’s trade volume goes into corresponding stock column.
 
 
 # 🚀 Solution Approach
-This repository contains a clean and efficient Python solution for the problem.
+This repository contains Python script solution.py for the problem.
 
 ## The key steps involved are:
-1. Input Parsing: Accept the input in a structured format (list, string, tree, etc.).
-1. Core Logic: Apply an optimized algorithm (e.g., hash maps, recursion, dynamic programming) to solve the problem efficiently.
-1. Output Generation: Return the results in the expected format.
-
-## FLOW 
-
- ┌─────────────────────┐
- │ 10 CSV Files (100GB)│
- └─────────┬───────────┘
-           │ (Read in chunks to handle memory limits)
-           ▼
- ┌───────────────────────────────────────────────────┐
- │  Chunked DataFrame (date, id, price, trade_volume)│
- └─────────┬────────────────────┬────────────────────┘
-           │                    │
-           ▼                    ▼
- ┌────────────────────┐     ┌───────────────────────┐
- │ Pivot for Price    │     │ Pivot for Volume      │
- │ (id → columns)     │     │ (id → columns)        │
- │ Columns: date, stk_001...│    │ Columns: date, stk_001... │
- └─────────┬───────────┘    └──────────┬────────────┘
-           │                           │
-           ▼                           ▼
- ┌─────────────────────┐    ┌───────────────────────┐
- │ Insert into Price   │    │ Insert into Volume    │
- │ Table in Database   │    │ Table in Database     │
- └─────────────────────┘    └───────────────────────┘
+1. Input Parsing: Accept the input in a structured format using Pandas dataframe with chunking 
+1. Core Logic: Pivot the stock
+1. Output Generation: Persist Price, Volume and Returns table
 
 
 ## 🛠️ Technologies Used
