@@ -12,7 +12,7 @@
     1. CPU: 4 cores
     1. Disk Space: 100 GB free
 
-## SRC
+## SRC Table Schema 
  
 | Column        | Data Type | Description                        |
 |---------------|-----------|------------------------------------|
@@ -21,8 +21,7 @@
 | price         | float     | Stock price                        |
 | trade_volume  | int       | Number of shares traded            |
 
-
-## TARGET:
+## TARGET Table Scehma
 1. Price Table:
 Each stock’s price goes into corresponding stock column.
 
@@ -33,7 +32,6 @@ Each stock’s price goes into corresponding stock column.
 | stk_002 | float     | Price for stock ID 2        |
 | ...     | float     | ...                         |
 | stk_200 | float     | Price for stock ID 200      |
-
 
 1. Volume Table:
 Each stock’s trade volume goes into corresponding stock column.
@@ -46,6 +44,14 @@ Each stock’s trade volume goes into corresponding stock column.
 | ...     | int       | ...                                 |
 | stk_200 | int       | Trade volume for stock ID 200       |
 
+1. Return  Table:
+| Column      | Data Type | Description                                       |
+|-------------|-----------|---------------------------------------------------|
+| date        | datetime  | Date in format `%Y-%m-%d`                          |
+| stk_001     | float     | Return for stock ID 1 (`(price_today - price_yesterday) / price_yesterday`) |
+| stk_002     | float     | Return for stock ID 2                              |
+| ...         | float     | ...                                                |
+| stk_200     | float     | Return for stock ID 200                            |
 
 # 🚀 Solution Approach
 This repository contains Python script solution.py for the problem.
@@ -55,7 +61,6 @@ This repository contains Python script solution.py for the problem.
 1. Core Logic: Pivot the stock
 1. Output Generation: Persist Price, Volume and Returns table
 
-
 ## 🛠️ Technologies Used
 1. Python 3.x
-1. Standard PyPi Libraries Only https://pypi.org/project/emoji/ 
+1. Standard PyPi Libraries Only https://pypi.org/project/emoji/
