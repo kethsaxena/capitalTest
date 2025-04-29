@@ -45,6 +45,8 @@ Each stock’s trade volume goes into corresponding stock column.
 | stk_200 | int       | Trade volume for stock ID 200       |
 
 1. Return  Table:
+Each stock's returns
+
 | Column      | Data Type | Description                                       |
 |-------------|-----------|---------------------------------------------------|
 | date        | datetime  | Date in format `%Y-%m-%d`                          |
